@@ -368,8 +368,9 @@
                     const lng = position.coords.longitude;
                     // Generar un enlace de Google Maps para buscar lugares cercanos
                     const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(foodType)}+cerca+de+mi/@${lat},${lng},15z`;
-                    window.open(mapUrl, '_blank');
-                    addMessage(mapUrl"¡Listo! Encontramos algunas opciones para ti. Se abrirá Google Maps en una nueva pestaña.", "bot");
+                    botResponse = mapUrl;
+					window.open(mapUrl, '_blank');
+                    addMessage("¡Listo! Encontramos algunas opciones para ti. Se abrirá Google Maps en una nueva pestaña.", "bot");
                 }, () => {
                     addMessage("No pudimos obtener tu ubicación. Por favor, habilita los servicios de ubicación para usar esta función.", "bot");
                 });
@@ -390,5 +391,6 @@
     </script>
 </body>
 </html>
+
 
 
