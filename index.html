@@ -369,6 +369,7 @@
                     // Generar un enlace de Google Maps para buscar lugares cercanos
                     const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(foodType)}+cerca+de+mi/@${lat},${lng},15z`;
                     botResponse = mapUrl;
+					addMessage(botResponse, 'bot');
 					window.open(mapUrl, '_blank');
                     addMessage("¡Listo! Encontramos algunas opciones para ti. Se abrirá Google Maps en una nueva pestaña.", "bot");
                 }, () => {
@@ -391,6 +392,7 @@
     </script>
 </body>
 </html>
+
 
 
 
